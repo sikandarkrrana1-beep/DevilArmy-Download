@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#b91c1c">
+  <title>DevilArmy Download — Music, Video & Files</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="logo">DA</div><div><h1>DevilArmy <span>Download</span></h1><small>Music • Videos • Files</small></div></div>
+  <p class="tagline">Apni pasand ki files aasani se khojein</p>
+</header>
+<nav class="quick" aria-label="Categories">
+  <a href="#latest">Latest Updates</a><a href="#categories">Categories</a><a href="#upload">Admin Upload</a>
+</nav>
+<main>
+  <section class="searchbox">
+    <h2>🔎 File Search</h2>
+    <form id="searchForm"><input id="searchInput" type="search" placeholder="Song, video ya file search karein..." aria-label="Search files"><button>Search</button></form>
+    <p class="hint">Sirf authorized ya aapki apni files upload/share karein.</p>
+  </section>
+  <section id="categories">
+    <h2 class="section-title">Popular Categories</h2>
+    <div class="chips">
+      <button data-category="Music">🎵 Music</button><button data-category="Video">🎬 Video</button>
+      <button data-category="Album">💿 Album</button><button data-category="Movie">🎞️ Movie</button>
+      <button data-category="DJ Remix">🎧 DJ Remix</button><button data-category="Other">📁 Other Files</button>
+      <button data-category="">All Files</button>
+    </div>
+  </section>
+  <section id="latest">
+    <h2 class="section-title">Latest Updates</h2>
+    <div id="status" class="status">Website setup pending: Cloudflare Worker URL add karein.</div>
+    <div id="fileList" class="file-list"></div>
+  </section>
+  <section id="upload" class="admin-card">
+    <h2 class="section-title">Admin File Upload</h2>
+    <p>Ye form admin ke liye hai. Upload ke liye Cloudflare Worker URL aur admin token configure karna zaroori hai.</p>
+    <form id="uploadForm">
+      <label>Admin Token<input id="adminToken" type="password" autocomplete="current-password" placeholder="Admin token"></label>
+      <label>File Title<input id="fileTitle" type="text" maxlength="120" placeholder="File ka naam" required></label>
+      <label>Category<select id="fileCategory"><option>Music</option><option>Video</option><option>Album</option><option>Movie</option><option>DJ Remix</option><option>Other</option></select></label>
+      <label>File select karein<input id="fileInput" type="file" required></label>
+      <button type="submit">Upload File</button>
+    </form>
+    <p id="uploadStatus" class="hint"></p>
+  </section>
+</main>
+<footer>© <span id="year"></span> DevilArmy Download · Share files only when you have permission.</footer>
+<script src="script.js"></script>
+</body></html>
